@@ -1,0 +1,66 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import FormattedDate from '../../components/FormattedDate.astro';
+import '../../styles/prose.css';
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+      body {
+        background-color: #f9f9f9;
+      }
+      .center-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3em;
+        margin-bottom: 3em;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 820px;
+        margin-bottom: 3em;
+      }
+      .center-container section {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+      }
+      @media (max-width: 575.98px) {
+        .center-container {
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+      }
+		</style>
+	</head>
+	<body>
+		<main class="prose center-container">
+        <header>
+            <h1>Preface</h1>
+            <blockquote>
+                <p><em>"There is nothing new under the sun."</em></p>
+                <cite>~ Ecclesiastes 1:9</cite>
+            </blockquote>
+            
+            <blockquote>
+                <p><em>"Every age has its own outlook.... We all therefore need the books that will correct the characteristic mistakes of our own period.... The only [medicine] is to keep the clean sea breeze of the centuries blowing through our minds, and this can only be done by reading old books."</em></p>
+                <cite>~ C. S. Lewis, Introduction to <em>"On the Incarnation"</em> by St. Athanasius</cite>
+            </blockquote>
+        </header>
+
+        <section>
+            <p>In these pages is nothing original. It is simply a recycling of what has already been stated again and again by other Christ-captivated souls in tattered scrolls scattered throughout the vaulted halls of history. I have only waded through the shallows; others have gone much deeper. Browse the aged pages of the Desert Fathers and Mothers, the Doctors of the Catholic Church, the Monastics, the Celtic Mission, the Medieval Mystics, the Eastern Orthodox Hesychasts, the Reformers, the Puritans, the Methodists, Thomas à Kempis, Ignatius of Loyola, Francis de Sales, Brother Lawrence, John Calvin, Jeremy Taylor, Richard Baxter, Thomas Watson, Jonathan Edwards, John Wesley, C.S. Lewis, A.W. Tozer, Dallas Willard and countless other masters of the spiritual life. You will find the genesis springs from which drink.</p>
+
+            <p>I have gathered up a tiny portion of the vast wisdom of the ancients into a little handbook of instruction that is digestible by the novice learner. This <em>catechesis</em>, this training process, not only reflects much of the content of the classical spiritual writers, but also exudes a bit of the feel of them—simple, earthy, and sharp as a knife. So, fighting off the urge to impress and embellish, with exciting, explosive, sensational stories or dazzling displays of academic acumen, and embracing the awkward tempo of an older, simpler age, here is my meager offering, a little rule for beginners, my <em>summa</em> of the spiritual life.</p>
+
+            <p>Many of these curious creatures commonly called Christians are reluctant to tread through the rich treasure troves of the spiritual classics. Therefore, I have arranged a sample, a cheat sheet, a simple map to guide pilgrims on their journey. My hope is that after handling and seeing and sampling the scent of a little bouquet from the garden, you will be emboldened to venture yourself into this unfamiliar territory—the writings of wisdom so named above. I am deeply indebted to these towering souls whose works I have absorbed. While I quote a few directly, almost everything else is only my paraphrase of their ideas which have subconsciously slipped into my spiritual bloodstream. How old is Christ-centered spirituality? It is as old as the hills and as new as the morning—having been practiced by saintly women and men for thousands of years—yet you must discover how to live it out today…on today’s earth, under today’s sun, in the life you call your own.</p>
+        </section>
+        </main>
+		<Footer />
+	</body>
+</html>

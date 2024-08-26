@@ -3,6 +3,9 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import {Image} from 'astro:assets'
+import joelImage from '../assets/joel.jpeg'
+import '../styles/prose.css'
 ---
 
 <!doctype html>
@@ -11,40 +14,72 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+		<main class="main-container">
+			<h1 class="main-title">Christ-Centered Spirituality</h1>
+			<h3 class="main-sub-title">A Catechesis for Today</h3>
+			<div class="statement">
+				<p>Does the Way of Christ really change lives? The answer one finds in the halls of history is a resounding <strong>yes</strong>! We can be transformed—radically, experientially, wholeheartedly transformed! But it requires work—both our work and God’s work. By the grace of God, we can become more Christlike by following the ancient path of discipleship to Jesus.</p>
+
+				<p>Christ-Centered Spirituality leads the reader through a comprehensive pattern of catechesis distilled from the early church, the Celtic monastic communities, the medieval monks, the reformers, the Society of Jesus, the Puritans, and many other traditions of the historic Christian church. Throughout history, the Spirit of the living God has used many of these practices and insights to catalyze revivals, awaken souls, incite revolutions, birth joy and bring hope to millions. This is your map to a meaningful existence. Let it spark renewal in your life today!</p>
+				<div class="byline">
+					<div class="author">
+						<p>Joel Elies</p>
+					</div>
+					<Image src={joelImage} alt="Joel" />
+				</div>
+				<div class="cToA">
+					<p><i>This site serves as an accompaniment to the book. You can purchase the book on the internet or you can start on the web app here.</i></p>
+					<a class="btn" href="/toc">Get started!</a>
+				</div>
+			</div>
 		</main>
 		<Footer />
 	</body>
 </html>
+<style>
+	.main-container {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		background-color: rgb(var(--darken-green));
+		color: var(--white);
+		margin: auto;
+		padding-top: 3em;
+		padding-bottom: 3em;
+		padding-left: 3em;
+		padding-right: 3em;
+	}
+	.main-title {
+		font-size: 3em;
+		font-family: Georgia, 'Times New Roman', Times, serif;
+		color: var(--white);
+		margin-bottom: 1em;
+	}
+	.main-sub-title {
+		font-size: 2em;
+		font-style: italic;
+		font-family: Georgia, 'Times New Roman', Times, serif;
+		color: var(--white);
+	}
+	.statement {
+		margin-top: 1em;
+		margin-bottom: 1em;
+		max-width: 780px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.byline {
+		display: flex;
+		flex-direction: column;
+		width: max-content;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.byline .author {
+		font-weight: bold;
+	}
+	.cToA {
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
+</style>

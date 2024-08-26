@@ -1,0 +1,115 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import '../../styles/prose.css';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+      body {
+        background-color: #f9f9f9;
+      }
+      .center-container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 820px;
+        margin-bottom: 3em;
+      }
+      .center-container section {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+      }
+		</style>
+	</head>
+	<body>
+		<main class="prose center-container">
+      <div class="toc">
+        <h1 class="toc-title">TABLE OF CONTENTS</h1>
+
+        <div class="toc-section">
+            <p class="preface"><a href="/p">Preface</a></p>
+        </div>
+
+        <div class="toc-section">
+            <h2 class="part-title">PART 1</h2>
+            <h3 class="part-subtitle">Meditations on the Mysteries of CHRIST</h3>
+
+            <ul class="chapter-list">
+                <li>1. Introduction to Christ-Centered Spirituality</li>
+                <li>2. On the Mysteries of Jesus Christ</li>
+                <li>3. His Annunciation: Promised Messiah of Ancient Prophecy</li>
+                <li>4. His Virgin Birth: No Other Child of Heavenly Origin</li>
+                <li>5. His Baptism: Brother of Sinful Humanity</li>
+                <li>6. His Temptation: Courageous Conqueror of Human Nature</li>
+                <li>7. His Disciples: Wise Mentor of an Apprentice Community</li>
+                <li>8. His Proclamation: Apocalyptic Prophet of Kingdom Come</li>
+                <li>9. His Teachings: Sage Instructor in Spiritual Reality</li>
+                <li>10. His Miracles: Mysterious Master of the Natural Order</li>
+                <li>11. His Healings: Caring Physician for Body and Soul</li>
+                <li>12. His Exorcisms: Warrior King in Supernatural Combat</li>
+                <li>13. His Parables: Enchanting Storyteller of an Invisible World</li>
+                <li>14. His Forgiveness: Merciful Friend of Sinners</li>
+                <li>15. His Transfiguration: Heavenly Lord Revealed in Glory</li>
+                <li>16. His Last Supper: Exemplar of Loving Servanthood</li>
+                <li>17. His Agony: Forsaken in Gethsemane's Darkness</li>
+                <li>18. His Betrayal: Sacrificial Lamb for Sinful Humanity</li>
+                <li>19. His Resurrection: Triumphant Victor over Death</li>
+                <li>20. His Ascension: Cosmic Presence throughout the World</li>
+            </ul>
+        </div>
+    </div>
+    </main>
+		<Footer />
+	</body>
+</html>
+<style>
+  .toc {
+    width: 70%;
+    margin: 2em auto;
+    text-align: left;
+}
+
+.toc-title {
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.preface, .part-title, .part-subtitle {
+    text-align: left;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.preface {
+    font-size: 16px;
+}
+
+.part-title {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.part-subtitle {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.chapter-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chapter-list li {
+    padding: .75em 0;
+    border-bottom: 1px dotted #333;
+}
+</style>

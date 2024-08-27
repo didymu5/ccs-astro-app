@@ -151,7 +151,7 @@ a:active {
 
 /* Visited state */
 a:visited {
-  color: #6c757d; /* Different color for visited links */
+  color: var(--dark-navy-blue); /* Different color for visited links */
 }
 a.asBtn {
   display: inline-block;

@@ -1,8 +1,12 @@
 ---
+import HeaderTop from '../../components/HeaderTop.astro';
 import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import '../../styles/prose.css';
+import {getCollection} from 'astro:content'
+const entries = (await getCollection('entry'))
+const part1Entries = entries.filter(entry => entry.data.part === '1')
 ---
 
 <!doctype html>
@@ -26,20 +30,21 @@ import '../../styles/prose.css';
 		</style>
 	</head>
 	<body>
+        <HeaderTop />
 		<main class="prose center-container">
       <div class="toc">
         <h1 class="toc-title">TABLE OF CONTENTS</h1>
 
         <div class="toc-section">
-            <p class="preface"><a href="/p">Preface</a></p>
+            <p class="preface"><a href="/preface">Preface</a></p>
         </div>
 
         <div class="toc-section">
             <h2 class="part-title">PART 1</h2>
             <h3 class="part-subtitle">Meditations on the Mysteries of CHRIST</h3>
-
             <ul class="chapter-list">
-                <li>1. Introduction to Christ-Centered Spirituality</li>
+                {part1Entries.map(entry => <li><a href=`p/${entry.slug}` title={entry.data.title}>{entry.data.title}</a></li>)}
+                <!-- <li>1. Introduction to Christ-Centered Spirituality</li>
                 <li>2. On the Mysteries of Jesus Christ</li>
                 <li>3. His Annunciation: Promised Messiah of Ancient Prophecy</li>
                 <li>4. His Virgin Birth: No Other Child of Heavenly Origin</li>
@@ -58,7 +63,7 @@ import '../../styles/prose.css';
                 <li>17. His Agony: Forsaken in Gethsemane's Darkness</li>
                 <li>18. His Betrayal: Sacrificial Lamb for Sinful Humanity</li>
                 <li>19. His Resurrection: Triumphant Victor over Death</li>
-                <li>20. His Ascension: Cosmic Presence throughout the World</li>
+                <li>20. His Ascension: Cosmic Presence throughout the World</li> -->
             </ul>
         </div>
     </div>
@@ -67,49 +72,55 @@ import '../../styles/prose.css';
 	</body>
 </html>
 <style>
-  .toc {
-    width: 70%;
-    margin: 2em auto;
-    text-align: left;
-}
+    .toc {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin: 2em auto;
+        text-align: left;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+    .toc h1 {
+        margin-bottom:0;
+    }
+    .toc-title {
+        font-size: 1.5em;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+    }
 
-.toc-title {
-    font-size: 1.5em;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-}
+    .preface, .part-title, .part-subtitle {
+        text-align: left;
+        margin-top: 20px;
+        font-weight: bold;
+    }
 
-.preface, .part-title, .part-subtitle {
-    text-align: left;
-    margin-top: 20px;
-    font-weight: bold;
-}
+    .preface {
+        font-size: 16px;
+    }
 
-.preface {
-    font-size: 16px;
-}
+    .part-title {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
 
-.part-title {
-    font-size: 18px;
-    text-transform: uppercase;
-}
+    .part-subtitle {
+        font-size: 14px;
+        font-style: italic;
+        margin-bottom: 10px;
+    }
 
-.part-subtitle {
-    font-size: 14px;
-    font-style: italic;
-    margin-bottom: 10px;
-}
+    .chapter-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
 
-.chapter-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.chapter-list li {
-    padding: .75em 0;
-    border-bottom: 1px dotted #333;
-}
+    .chapter-list li {
+        padding: .75em 0;
+        border-bottom: 1px dotted #333;
+    }
 </style>

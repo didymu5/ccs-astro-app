@@ -15,6 +15,10 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.prose p {
+  margin-bottom: 2em;
+}
+
 .prose h1, .prose .title {
   text-align: center;
   font-size: 2em;
@@ -59,7 +63,6 @@
 
 .prose p {
   margin-bottom: 20px;
-  text-align: justify;
 }
 .prose em {
   font-style: italic;

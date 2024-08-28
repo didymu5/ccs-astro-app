@@ -43,7 +43,7 @@ const part1Entries = entries.filter(entry => entry.data.part === '1')
             <h2 class="part-title">PART 1</h2>
             <h3 class="part-subtitle">Meditations on the Mysteries of CHRIST</h3>
             <ul class="chapter-list">
-                {part1Entries.map(entry => <li><a href=`p/${entry.slug}` title={entry.data.title}>{entry.data.title}</a></li>)}
+{part1Entries.map(entry => <li><a href=`/p/${entry.slug}` title={entry.data.title}>{entry.data.title}</a></li>)}
                 <!-- <li>1. Introduction to Christ-Centered Spirituality</li>
                 <li>2. On the Mysteries of Jesus Christ</li>
                 <li>3. His Annunciation: Promised Messiah of Ancient Prophecy</li>

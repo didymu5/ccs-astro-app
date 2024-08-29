@@ -4,6 +4,7 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import {Image} from 'astro:assets'
 import joelImage from '../assets/joel.jpeg'
+import bookCoverImg from '../assets/book_cover.png'
 import '../styles/button.css'
 ---
 
@@ -18,7 +19,7 @@ import '../styles/button.css'
 			<h3 class="main-sub-title">A Catechesis for Today</h3>
 			<div class="statement">
 				<p>Does the Way of Christ really change lives? The answer one finds in the halls of history is a resounding <strong>yes</strong>! We can be transformed—radically, experientially, wholeheartedly transformed! But it requires work—both our work and God’s work. By the grace of God, we can become more Christlike by following the ancient path of discipleship to Jesus.</p>
-
+				<a href="https://www.amazon.com/Christ-Centered-Spirituality-Joel-Stephen-Elies/dp/B0CLKVCR7B/"><Image src={bookCoverImg} alt="Christ-Centered Spirituality: A Catechesis for Today" class="bookcover" /></a>
 				<p>Christ-Centered Spirituality leads the reader through a comprehensive pattern of catechesis distilled from the early church, the Celtic monastic communities, the medieval monks, the reformers, the Society of Jesus, the Puritans, and many other traditions of the historic Christian church. Throughout history, the Spirit of the living God has used many of these practices and insights to catalyze revivals, awaken souls, incite revolutions, birth joy and bring hope to millions. This is your map to a meaningful existence. Let it spark renewal in your life today!</p>
 				<div class="byline">
 					<div class="author">
@@ -27,7 +28,8 @@ import '../styles/button.css'
 					<Image src={joelImage} alt="Joel Elies" />
 				</div>
 				<div class="cToA">
-					<p><i>This site serves as an accompaniment to the book. You can purchase the book on the internet or you can start on the web app here.</i></p>
+					<p><i>This site serves as an accompaniment to the book. </i></p>
+					<p>Purchase the book on <a href="https://www.amazon.com/Christ-Centered-Spirituality-Joel-Stephen-Elies/dp/B0CLKVCR7B/">Amazon</a></p>
 					<a class="btn" href="/toc">Table of Contents</a>
 				</div>
 			</div>
@@ -85,6 +87,10 @@ import '../styles/button.css'
 	.cToA {
 		margin-top: 2em;
 		margin-bottom: 2em;
+	}
+	.bookcover {
+		width: 100%;
+		max-width: 600px;
 	}
 	@media (max-width: 575.98px) {
 		.main-container {

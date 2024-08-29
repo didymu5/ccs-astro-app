@@ -44,10 +44,8 @@ const part1Entries = entries.filter(entry => entry.data.part === '1')
             <h3 class="part-subtitle">Meditations on the Mysteries of CHRIST</h3>
             <ul class="chapter-list">
 {part1Entries.map(entry => <li><a href=`/p/${entry.slug}` title={entry.data.title}>{entry.data.title}</a></li>)}
-                <!-- <li>1. Introduction to Christ-Centered Spirituality</li>
-                <li>2. On the Mysteries of Jesus Christ</li>
-                <li>3. His Annunciation: Promised Messiah of Ancient Prophecy</li>
-                <li>4. His Virgin Birth: No Other Child of Heavenly Origin</li>
+<li>3. His Annunciation: Promised Messiah of Ancient Prophecy</li>
+<li>4. His Virgin Birth: No Other Child of Heavenly Origin</li>
                 <li>5. His Baptism: Brother of Sinful Humanity</li>
                 <li>6. His Temptation: Courageous Conqueror of Human Nature</li>
                 <li>7. His Disciples: Wise Mentor of an Apprentice Community</li>
@@ -63,7 +61,7 @@ const part1Entries = entries.filter(entry => entry.data.part === '1')
                 <li>17. His Agony: Forsaken in Gethsemane's Darkness</li>
                 <li>18. His Betrayal: Sacrificial Lamb for Sinful Humanity</li>
                 <li>19. His Resurrection: Triumphant Victor over Death</li>
-                <li>20. His Ascension: Cosmic Presence throughout the World</li> -->
+		<li>20. His Ascension: Cosmic Presence throughout the World</li>
             </ul>
         </div>
     </div>
@@ -122,5 +120,9 @@ const part1Entries = entries.filter(entry => entry.data.part === '1')
     .chapter-list li {
         padding: .75em 0;
         border-bottom: 1px dotted #333;
+	color: rgb(var(--gray-dark))
+    }
+    .chapter-list li a {
+	color: #000;
     }
 </style>

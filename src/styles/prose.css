@@ -43,10 +43,9 @@
 .prose blockquote {
   font-style: italic;
   font-size: 1.1em;
-  margin: 20px 40px;
   position: relative;
-  padding: 10px 20px;
   border: none;
+  margin-top: 1em;
 }
 
 .prose blockquote p {

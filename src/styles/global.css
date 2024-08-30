@@ -131,7 +131,6 @@ hr {
 a {
   color: var(--ivory); /* Link color */
   text-decoration: none; /* Removes the underline */
-  font-weight: bold; /* Makes the text bold */
   transition: color 0.3s ease; /* Smooth color transition */
 }
 
@@ -149,7 +148,7 @@ a:active {
 
 /* Visited state */
 a:visited {
-  color: var(--dark-navy-blue); /* Different color for visited links */
+  color: var(--ivory);
 }
 a.asBtn {
   display: inline-block;

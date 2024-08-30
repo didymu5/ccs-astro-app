@@ -99,7 +99,10 @@ const part1Entries = entries.filter(entry => entry.data.part === '1')
     .preface {
         font-size: 16px;
     }
-
+    .preface a, .preface a:visited {
+	color: #000;
+	text-decoration: underline;
+    }
     .part-title {
         font-size: 18px;
         text-transform: uppercase;
@@ -120,9 +123,14 @@ const part1Entries = entries.filter(entry => entry.data.part === '1')
     .chapter-list li {
         padding: .75em 0;
         border-bottom: 1px dotted #333;
-	color: rgb(var(--gray-dark))
+	color: rgba(var(--gray-dark), 0.9);
     }
-    .chapter-list li a {
+    .toc a {
 	color: #000;
+	text-decoration: underline;
+    }
+    .toc a:hover {
+	text-decoration: none;
+	color: rgba(var(--gray-dark), 0.9);
     }
 </style>

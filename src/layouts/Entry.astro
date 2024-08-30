@@ -26,7 +26,13 @@ const sanitizeTitle = stripNumberFromString(title)
       margin-right: auto;
       max-width: 820px;
     }
-
+		.bottom-link-back {
+			text-align: center;
+		}
+		.bottom-link-back a {
+			color: #333;
+			text-decoration: underline;
+		}
 		</style>
 	</head>
 
@@ -41,6 +47,9 @@ const sanitizeTitle = stripNumberFromString(title)
 					<slot />
 				</div>
 			</article>
+			<div class="bottom-link-back">
+				<a href="/toc" title="table of contents">Table of Contents</a>
+			</div>
 		</main>
 		<Footer />
 	</body>

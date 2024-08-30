@@ -19,7 +19,8 @@
   margin-bottom: 2em;
 }
 
-.prose h1, .prose .title {
+.prose h1,
+.prose .title {
   text-align: center;
   font-size: 2em;
   margin-bottom: 20px;
@@ -67,7 +68,7 @@
   font-style: italic;
 }
 .prose ol {
-  margin:0;
+  margin: 0;
   padding: 0;
   padding-left: 1em;
 }

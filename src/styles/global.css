@@ -129,7 +129,7 @@ hr {
   }
 }
 a {
-  color: var(--ivory); /* Link color */
+  color: rgb(var(--gray-dark)); /* Link color */
   text-decoration: none; /* Removes the underline */
   transition: color 0.3s ease; /* Smooth color transition */
 }
